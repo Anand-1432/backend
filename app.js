@@ -2,13 +2,10 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-const staticpath = path.join(__dirname,"./client")
-console.log(staticpath);
-
 require('./db/connection');
 const User = require('./db/user');
 
-app.use(express.static(staticpath));
+app.use(express.static(path.join(__dirname,"./client")));
 
 app.get('/',(req,res)=>{
     res.send("hellow from anand sahi he");
