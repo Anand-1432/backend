@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-dotenv.config();
+// const mongoose = require('mongoose');
+// const dotenv = require('dotenv');
+// dotenv.config();
 
-const port = process.env.PORT;
+// const port = process.env.PORT;
 require('./db/connection');
 const User = require('./db/user');
 
@@ -18,6 +18,6 @@ app.get('/data',async(req,res)=>{
     res.send(data);
 })
 
-app.listen(port,()=>{
-    console.log(`listening at port ${port}`);
+app.listen(8000,()=>{
+    console.log(`listening at port ${8000}`);
 })
