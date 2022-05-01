@@ -1,13 +1,14 @@
+const path = require('path');
 const express = require('express');
 const app = express();
-// const mongoose = require('mongoose');
-// const dotenv = require('dotenv');
-// dotenv.config();
 
-// const port = process.env.PORT;
+const staticpath = path.join(__dirname,"./client")
+console.log(staticpath);
+
 require('./db/connection');
 const User = require('./db/user');
 
+app.use(express.static(staticpath));
 
 app.get('/',(req,res)=>{
     res.send("hellow from anand sahi he");
