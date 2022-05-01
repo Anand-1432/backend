@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/',(req,res)=>{
-    res.send("hellow from backend");
+    res.send("hellow from anand");
 });
 
 app.listen(8000,()=>{
