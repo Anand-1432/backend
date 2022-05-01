@@ -10,7 +10,7 @@ const User = require('./db/user');
 
 
 app.get('/',(req,res)=>{
-    res.send("hellow from anand");
+    res.send("hellow from anand sahi he");
 });
 
 app.get('/data',async(req,res)=>{
